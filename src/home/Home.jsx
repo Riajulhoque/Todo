@@ -20,16 +20,21 @@ const Home = () => {
   return (
     <div>
       <h1 className='text-center text-4xl font-bold m-[50px]'>Welcome to your  Todo list</h1>
-      <div className="add_list w-[60%]"> 
+      <div className="add_list w-[60%] mx-auto flex">
         <input
           type="text"
           placeholder="Type here"
-          className="input input-bordered w-full max-w-xs mx-4"
+          className="input input-bordered w-full mx-4"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
         />
-        <button className="btn btn-primary mx-4">Add Task</button>
+        <button className="btn btn-primary mx-4" onClick={handleAddTask}>
+          Add Task
+        </button>
       </div>
 
       <div className='flex gap-4'>
+
         <div className="input_section w-[60%] mx-auto my-4 p-4 border border-gray-300 rounded-lg  items-center">
 
         
